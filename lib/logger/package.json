@@ -3,5 +3,8 @@
   "version": "0.0.0",
   "main": "index.js",
   "author": "Shepless (http://shepless.github.io/)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "winston": "~0.8.3"
+  }
 }
