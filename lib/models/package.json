@@ -1,0 +1,14 @@
+{
+  "name": "hoarder-api-models",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Shepless (http://shepless.github.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "modella-nedb": "0.0.1",
+    "modella": "~0.2.14",
+    "modella-validators": "~0.1.2",
+    "modella-friendly-errors": "~0.1.1",
+    "moment": "~2.9.0"
+  }
+}

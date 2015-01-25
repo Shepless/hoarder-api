@@ -1,0 +1,7 @@
+{
+  "name": "hoarder-api-logger",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Shepless (http://shepless.github.io/)",
+  "license": "ISC"
+}

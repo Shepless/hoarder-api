@@ -1,0 +1,11 @@
+{
+  "name": "hoarder-api-tvdb",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Shepless (http://shepless.github.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "node-tvdb": "~0.4.6",
+    "moment": "~2.9.0"
+  }
+}

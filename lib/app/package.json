@@ -1,0 +1,12 @@
+{
+  "name": "hoarder-api-app",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Shepless (http://shepless.github.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "~8.1.0",
+    "moment": "~2.9.0"
+  }
+}
