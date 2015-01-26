@@ -1,8 +1,10 @@
 'use strict';
 
-var server = require.main.require('lib/app'),
-    jobs = require.main.require('lib/jobs'),
-    logger = require.main.require('lib/logger');
+var rek = require('rekuire'),
+    foo = rek('hapi'),
+    server = rek('lib/app'),
+    jobs = rek('lib/jobs'),
+    logger = rek('lib/logger');
 
 server.start(function () {
     logger.info('Hoarder server started');
