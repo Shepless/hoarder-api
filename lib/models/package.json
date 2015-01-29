@@ -5,10 +5,11 @@
   "author": "Shepless (http://shepless.github.io/)",
   "license": "ISC",
   "dependencies": {
-    "modella-nedb": "0.0.1",
-    "modella": "~0.2.14",
-    "modella-validators": "~0.1.2",
-    "modella-friendly-errors": "~0.1.1",
-    "moment": "~2.9.0"
+    "moment": "~2.9.0",
+    "bluebird": "~2.9.3",
+    "nedb": "~1.1.1",
+    "class-extender": "~1.0.9",
+    "validation-builder-js": "0.0.2",
+    "underscore": "~1.7.0"
   }
 }
