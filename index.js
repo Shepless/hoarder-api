@@ -1,14 +1,14 @@
 'use strict';
 
 var rek = require('rekuire'),
-    server = rek('lib/app'),
-    jobs = rek('lib/jobs'),
+    JobManager = rek('lib/job-manager'),
     logger = rek('lib/logger'),
-    foo = rek('lib/tvdb/jobs/get-new-episodes');
+    server = rek('lib/app');
 
 server.start(function () {
     logger.info('Hoarder server started');
-    jobs.start();
 
-    foo();
+    JobManager.configure();
+    JobManager.run(JobManager.JOB_NAMES.CHECK_FOR_UPCOMING_EPISODES);
+    JobManager.run(JobManager.JOB_NAMES.GET_NEW_EPISODES);
 });
