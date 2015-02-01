@@ -11,4 +11,6 @@ server.start(function () {
     JobManager.configure();
     JobManager.run(JobManager.JOB_NAMES.CHECK_FOR_UPCOMING_EPISODES);
     JobManager.run(JobManager.JOB_NAMES.GET_NEW_EPISODES);
+    JobManager.run(JobManager.JOB_NAMES.GET_SHOW_UPDATES);
+    JobManager.run(JobManager.JOB_NAMES.GET_EPISODE_UPDATES);
 });
