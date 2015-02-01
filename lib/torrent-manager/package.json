@@ -1,5 +1,5 @@
 {
-  "name": "notifications",
+  "name": "hoarder-api-torrents",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -7,9 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shepless (http://shepless.github.io/)",
-  "license": "ISC",
-  "dependencies": {
-    "pushbullet": "~1.4.2",
-    "moment": "~2.9.0"
-  }
+  "license": "ISC"
 }
