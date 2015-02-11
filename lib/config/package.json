@@ -1,5 +1,5 @@
 {
-  "name": "hoarder-api-torrents",
+  "name": "config",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -9,10 +9,7 @@
   "author": "Shepless (http://shepless.github.io/)",
   "license": "ISC",
   "dependencies": {
-    "htmlparser2": "~3.8.2",
-    "soupselect": "~0.2.0",
-    "request-promise": "~0.4.0",
-    "bluebird": "~2.9.8",
+    "jsonfile": "~2.0.0",
     "fs-extra": "~0.16.3"
   }
 }

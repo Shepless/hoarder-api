@@ -1,22 +1,30 @@
 'use strict';
 
 var rek = require('rekuire'),
-    JobManager = rek('lib/job-manager'),
-    EventManager = rek('lib/event-manager'),
-    Notifications = rek('lib/notifications'),
-    TorrentManager = rek('lib/torrent-manager'),
-    logger = rek('lib/logger'),
-    server = rek('lib/app');
+    config = rek('lib/config'),
+    app = rek('lib/app'),
+    jobManager = rek('lib/job-manager'),
+    eventManager = rek('lib/event-manager'),
+    notifications = rek('lib/notifications'),
+    torrentManager = rek('lib/torrent-manager'),
+    logger = rek('lib/logger');
 
-server.start(function () {
+app.start(function () {
+    if (config.isHoarderConfigured) {
+        jobManager.configure();
+        eventManager.configure();
+        torrentManager.configure();
+        notifications.configure();
+
+        //jobManager.run(jobManager.JOB_NAMES.CHECK_FOR_UPCOMING_EPISODES);
+        //JobManager.run(JobManager.JOB_NAMES.GET_NEW_EPISODES);
+        //JobManager.run(JobManager.JOB_NAMES.GET_SHOW_UPDATES);
+        //JobManager.run(JobManager.JOB_NAMES.GET_EPISODE_UPDATES);
+    } else {
+        logger.info('Hoarder jobs not running - configuration is required');
+        config.isHoarderConfigured = true;
+        config.update();
+    }
+
     logger.info('Hoarder server started');
-
-    JobManager.configure();
-    EventManager.configure();
-    TorrentManager.configure();
-    Notifications.configure();
-    JobManager.run(JobManager.JOB_NAMES.CHECK_FOR_UPCOMING_EPISODES);
-    //JobManager.run(JobManager.JOB_NAMES.GET_NEW_EPISODES);
-    //JobManager.run(JobManager.JOB_NAMES.GET_SHOW_UPDATES);
-    //JobManager.run(JobManager.JOB_NAMES.GET_EPISODE_UPDATES);
 });
